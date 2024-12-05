@@ -1,0 +1,182 @@
+[
+    {
+        "id": "movil-01",
+        "titulo": "Movil 01",
+        "imagen": "./img/moviles/01.jpg",
+        "categoria": {
+            "nombre": "Móviles",
+            "id": "moviles"
+        },
+        "precio": 850
+    },
+    {
+        "id": "movil-02",
+        "titulo": "Movil 02",
+        "imagen": "./img/moviles/02.jpg",
+        "categoria": {
+            "nombre": "Móviles",
+            "id": "moviles"
+        },
+        "precio": 909
+    },
+    {
+        "id": "movil-03",
+        "titulo": "Movil 03",
+        "imagen": "./img/moviles/03.jpg",
+        "categoria": {
+            "nombre": "Móviles",
+            "id": "moviles"
+        },
+        "precio": 1249
+    },
+    {
+        "id": "movil-04",
+        "titulo": "Movil 04",
+        "imagen": "./img/moviles/04.jpg",
+        "categoria": {
+            "nombre": "Móviles",
+            "id": "moviles"
+        },
+        "precio": 349
+    },
+    {
+        "id": "movil-05",
+        "titulo": "Movil 05",
+        "imagen": "./img/moviles/05.jpg",
+        "categoria": {
+            "nombre": "Móviles",
+            "id": "moviles"
+        },
+        "precio": 450
+    },
+    {
+        "id": "portatil-01",
+        "titulo": "Portatil 01",
+        "imagen": "./img/portatiles/01.jpg",
+        "categoria": {
+            "nombre": "Portatiles",
+            "id": "portatiles"
+        },
+        "precio": 1250
+    },
+    {
+        "id": "portatil-02",
+        "titulo": "Portatil 02",
+        "imagen": "./img/portatiles/02.jpg",
+        "categoria": {
+            "nombre": "Portatiles",
+            "id": "portatiles"
+        },
+        "precio": 1100
+    },
+    {
+        "id": "portatil-03",
+        "titulo": "Portatil 03",
+        "imagen": "./img/portatiles/03.jpg",
+        "categoria": {
+            "nombre": "Portatiles",
+            "id": "portatiles"
+        },
+        "precio": 650
+    },
+    {
+        "id": "portatil-04",
+        "titulo": "Portatil 04",
+        "imagen": "./img/portatiles/04.jpg",
+        "categoria": {
+            "nombre": "Portatiles",
+            "id": "portatiles"
+        },
+        "precio": 450
+    },
+    {
+        "id": "portatil-05",
+        "titulo": "Portatil 05",
+        "imagen": "./img/portatiles/05.jpg",
+        "categoria": {
+            "nombre": "Portatiles",
+            "id": "portatiles"
+        },
+        "precio": 909
+    },
+    {
+        "id": "portatil-06",
+        "titulo": "Portatil 06",
+        "imagen": "./img/portatiles/06.jpg",
+        "categoria": {
+            "nombre": "Portatiles",
+            "id": "portatiles"
+        },
+        "precio": 899
+    },
+    {
+        "id": "portatil-07",
+        "titulo": "Portatil 07",
+        "imagen": "./img/portatiles/07.jpg",
+        "categoria": {
+            "nombre": "Portatiles",
+            "id": "portatiles"
+        },
+        "precio": 700
+    },
+    {
+        "id": "portatil-08",
+        "titulo": "Portatil 08",
+        "imagen": "./img/portatiles/08.jpg",
+        "categoria": {
+            "nombre": "Portatiles",
+            "id": "portatiles"
+        },
+        "precio": 400
+    },
+    {
+        "id": "television-01",
+        "titulo": "Televisiones 01",
+        "imagen": "./img/televisiones/01.jpg",
+        "categoria": {
+            "nombre": "Televisiones",
+            "id": "televisiones"
+        },
+        "precio": 500
+    },
+    {
+        "id": "television-02",
+        "titulo": "Televisiones 02",
+        "imagen": "./img/televisiones/02.jpg",
+        "categoria": {
+            "nombre": "Televisiones",
+            "id": "televisiones"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "television-03",
+        "titulo": "Televisiones 03",
+        "imagen": "./img/televisiones/03.jpg",
+        "categoria": {
+            "nombre": "Televisiones",
+            "id": "televisiones"
+        },
+        "precio": 700
+    },
+    {
+        "id": "television-04",
+        "titulo": "Televisiones 04",
+        "imagen": "./img/televisiones/04.jpg",
+        "categoria": {
+            "nombre": "Televisiones",
+            "id": "televisiones"
+        },
+        "precio": 550
+    },
+    {
+        "id": "television-05",
+        "titulo": "Televisiones 05",
+        "imagen": "./img/televisiones/05.jpg",
+        "categoria": {
+            "nombre": "Televisiones",
+            "id": "televisiones"
+        },
+        "precio": 1200
+    }
+]
