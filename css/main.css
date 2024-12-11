@@ -1,0 +1,21 @@
+.header-mobile{
+    display: none;
+}
+.close-menu{
+    display: none;
+}
+.contenedor{
+    background-color:var(clr--white);
+
+    border: solid black;
+}
+body{
+    background-color:var(clr--main) ;
+}
+.titulo-principal{
+    border: solid black;
+    color: var(--clr-green);
+}
+.contenedor-productos{
+    background-color: var(--clr-white);
+}
