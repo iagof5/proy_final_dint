@@ -15,11 +15,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+    
+}
+body{
+    background-color: var(--clr-green);
 }
 
 html {
     /* Valor por defecto */
     font-size: 16px;
+    height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul{
