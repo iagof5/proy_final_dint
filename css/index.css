@@ -7,8 +7,6 @@ body{
 }
 
 .container{
-    
-    
     background-color: var(--clr-white);
     text-align: center;
     border-radius: 10px;

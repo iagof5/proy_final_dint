@@ -5,17 +5,82 @@
     display: none;
 }
 .contenedor{
-    background-color:var(clr--white);
+    padding-top: 1rem;
+    padding-left: 1%;
+    display: flex;
+    background-color: var(--clr-main);
+    
 
-    border: solid black;
+    
 }
 body{
-    background-color:var(clr--main) ;
+    background-color:var(--clr-main) ;
 }
 .titulo-principal{
-    border: solid black;
-    color: var(--clr-green);
+    padding: 1rem ;
+    color: var(--clr-main);
 }
 .contenedor-productos{
     background-color: var(--clr-white);
 }
+.logo{
+    color: var(--clr-white);
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.aside-visible h1{
+    text-align: center;
+}
+.aside-visible{
+    flex-direction: column;
+    height: 100rem;
+    display: flex;
+    flex: 1;
+    
+    left: 10px;
+    
+    
+}
+.texto-footer{
+    position: fixed;
+    bottom: 2rem;
+    margin-left: 2rem;
+}
+main{
+    
+    background-color: var(--clr-white);
+    border-radius: 10px;
+    flex: 3;
+    
+}
+
+
+
+.menu{
+    margin-top: 20rem;
+}
+
+.boton-menu{
+    
+    border: none;
+    padding: 2rem;
+    text-align: left; 
+    width: 90%;
+    border-radius: 1rem;
+    background-color: var(--clr-main);
+    color: var(--clr-white);
+    margin: 1rem;
+
+    
+}
+ li a{
+    display: block;
+ }
+
+
+.boton-menu:hover{
+    background-color: var(--clr-white);
+    color: var(--clr-main);
+}
+
