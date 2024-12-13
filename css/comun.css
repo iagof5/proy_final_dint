@@ -18,7 +18,8 @@
     
 }
 body{
-    background-color: var(--clr-green);
+    background-color: var(--clr-main);
+
 }
 
 html {

@@ -37,9 +37,11 @@ input{
 }
 #submit:hover{
     background-color: var(--clr-main-light);
+    transition: 350ms;
 }
 #limpiar:hover{
     background-color: var(--clr-main-light);
+    transition: 350ms;
 }
 #botones{
     margin-top: 20px;
