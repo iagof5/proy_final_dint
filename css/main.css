@@ -9,6 +9,8 @@
     padding-left: 1%;
     display: flex;
     background-color: var(--clr-main);
+
+   
     
 
     
@@ -34,11 +36,11 @@ body{
 }
 .aside-visible{
     flex-direction: column;
-    height: 80rem;
+    height: 57rem;
     display: flex;
     flex: 1;
     
-    left: 10px;
+    left: 0.8rem;
     
     
 }
@@ -50,7 +52,7 @@ body{
 main{
     
     background-color: var(--clr-white);
-    border-radius: 10px;
+    border-radius: 0.8rem;
     flex: 3;
     
 }
@@ -58,7 +60,7 @@ main{
 
 
 .menu{
-    margin-top: 20rem;
+    margin-top: 13rem;
 }
 
 .boton-menu{
