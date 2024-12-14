@@ -24,6 +24,11 @@ body{
 }
 .contenedor-productos{
     background-color: var(--clr-white);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 0.5rem;
+   
+
 }
 .logo{
     color: var(--clr-white);
@@ -84,5 +89,59 @@ main{
 .boton-menu:hover{
     background-color: var(--clr-white);
     color: var(--clr-main);
+    transition: 350ms;
+}
+.producto { 
+    
+    
+    margin:2rem;
+    background-color: var(--clr-light-gray); 
+    border-radius: 0.5rem; 
+    overflow: hidden; 
+    width: 12rem; 
+    height: auto; 
+ } 
+
+ .producto-imagen {
+    
+    width: 100%; 
+    height: auto; 
+    object-fit: cover;
+ } 
+ .producto-detalles {
+    width: auto;
+    height: auto;
+   
+    padding: 0.3rem;  
+    background-color: var(--clr-main);
+    color: var(--clr-light-gray);
+    border-radius: 1rem;
+} 
+.producto-titulo { 
+    font-size: 1rem; 
+    color: var(--clr-white);
+} 
+
+
+.producto-precio { 
+    font-size: 1rem; 
+    color: var(--clr-white); 
+    margin-top: 0.5rem; 
+} 
+.producto-agregar { 
+    
+    background-color: var(--clr-white); 
+    color: var(--clr-main); 
+    
+    padding:0.5rem; 
+    border-radius: 1rem; 
+    border: none;
+    
+    
+    width: 100%;
+    
+} 
+.producto-agregar:hover {
+    background-color: var(--clr-gray); 
     transition: 350ms;
 }
