@@ -89,6 +89,7 @@ main{
 .carrito-comprado{
     display: none;
 }
+
 .carrito-producto {
     display: flex;
     align-items: center;
@@ -120,4 +121,68 @@ main{
 .carrito-producto-eliminar{
     color: red;
     border: none;
+}
+
+.carrito-comprado{
+    background-color: var(--clr-main);
+}
+.carrito-acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 0.5rem;
+}
+
+.carrito-acciones-izquierda, .carrito-acciones-derecha {
+    display: flex;
+    align-items: center;
+}
+
+.carrito-acciones-izquierda {
+    justify-content: flex-start;
+}
+
+.carrito-acciones-derecha {
+    justify-content: flex-end;
+}
+
+.carrito-acciones-total {
+    display: flex;
+    flex-direction:row;
+    align-items: flex-end;
+    margin-right: 1rem;
+    color: var(--clr-main);
+    font-size: medium;
+}
+
+.carrito-acciones-total p {
+    margin: 0;
+    
+    
+}
+
+.carrito-acciones-comprar {
+    padding: 0.6rem;
+    background-color:var(--clr-main);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;
+}
+.carrito-acciones-vaciar{
+background-color: var(--clr-gray);
+padding: 0.6rem;
+border-radius: 0.5rem;
+color: var(--clr-main);
+border: none;
+}
+.carrito-acciones-vaciar:hover, .carrito-acciones-comprar:hover {
+    background-color:var(--clr-white);
+}
+.carrito-acciones-comprar:hover{
+    color:black;
 }

@@ -21,8 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     actualizarCarrito();
 
-    agregarBotonesAcciones();
-
     document.querySelectorAll('.logo').forEach(logo => {
         logo.addEventListener('click', () => {
             sessionStorage.clear();
@@ -67,6 +65,12 @@ function mostrarCarrito(productos, carrito) {
 
     actualizarTotalCarrito(productos, carrito);
 
+    if (Object.keys(carrito).length > 0) {
+        agregarBotonesAcciones();
+    } else {
+        quitarBotonesAcciones();
+    }
+
     const botonesEliminar = document.querySelectorAll('.carrito-producto-eliminar');
     botonesEliminar.forEach(boton => {
         boton.addEventListener('click', eliminarDelCarrito);
@@ -93,24 +97,35 @@ function actualizarCarrito() {
 }
 
 function eliminarDelCarrito(event) {
+    if (!confirm('¿Quieres eliminar el producto?')) {
+        return;
+    }
+
     const idProducto = event.target.closest('button').getAttribute('data-id');
     let carrito = JSON.parse(sessionStorage.getItem('carrito')) || {};
+    const productoDiv = event.target.closest('.carrito-producto');
+    const cantidadElem = productoDiv.querySelector('.carrito-producto-cantidad p');
+    const subtotalElem = productoDiv.querySelector('.carrito-producto-subtotal p');
+    const productoPrecio = parseFloat(productoDiv.querySelector('.carrito-producto-precio p').textContent.replace('$', ''));
 
     if (carrito[idProducto]) {
         if (carrito[idProducto] > 1) {
             carrito[idProducto]--;
+            cantidadElem.textContent = carrito[idProducto];
+            subtotalElem.textContent = `$${productoPrecio * carrito[idProducto]}`;
         } else {
             delete carrito[idProducto];
+            productoDiv.remove();
         }
 
         sessionStorage.setItem('carrito', JSON.stringify(carrito));
         actualizarCarrito();
-        event.target.closest('.carrito-producto').remove();
     }
 
     const productos = document.querySelectorAll('.carrito-producto');
     if (productos.length === 0) {
         mostrarMensajeVacio();
+        quitarBotonesAcciones();
     }
 
     const totalElem = document.getElementById('Total');
@@ -125,20 +140,34 @@ function eliminarDelCarrito(event) {
 }
 
 function vaciarCarrito() {
-    sessionStorage.clear();
-    actualizarCarrito();
-    const contenedorCarrito = document.getElementById('carrito-productos');
-    contenedorCarrito.innerHTML = ""; 
-    const totalElem = document.getElementById('Total');
-    if (totalElem) {
-        totalElem.textContent = "$0"; 
+    if (confirm('¿Estás seguro de que quieres eliminar todos los productos del carrito?')) {
+        sessionStorage.clear();
+        actualizarCarrito();
+        const contenedorCarrito = document.getElementById('carrito-productos');
+        contenedorCarrito.innerHTML = ""; 
+        const totalElem = document.getElementById('Total');
+        if (totalElem) {
+            totalElem.textContent = "$0"; 
+        }
+        mostrarMensajeVacio();
+        quitarBotonesAcciones();
     }
-    mostrarMensajeVacio();
 }
 
 function comprarAhora() {
-    alert('Gracias por tu compra.');
-    vaciarCarrito();
+    if (confirm('¿Estás seguro de que quieres comprar todos los productos?')) {
+        alert('Gracias por tu compra.');
+        sessionStorage.clear();
+        actualizarCarrito();
+        const contenedorCarrito = document.getElementById('carrito-productos');
+        contenedorCarrito.innerHTML = ""; 
+        const totalElem = document.getElementById('Total');
+        if (totalElem) {
+            totalElem.textContent = "$0"; 
+        }
+        mostrarMensajeVacio();
+        quitarBotonesAcciones();
+    }
 }
 
 function agregarBotonesAcciones() {
@@ -162,6 +191,13 @@ function agregarBotonesAcciones() {
 
     document.querySelector('.carrito-acciones-vaciar').addEventListener('click', vaciarCarrito);
     document.querySelector('.carrito-acciones-comprar').addEventListener('click', comprarAhora);
+}
+
+function quitarBotonesAcciones() {
+    const accionesElem = document.getElementById('carrito-acciones');
+    if (accionesElem) {
+        accionesElem.remove();
+    }
 }
 
 function mostrarMensajeVacio() {
