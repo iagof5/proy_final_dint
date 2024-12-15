@@ -89,3 +89,35 @@ main{
 .carrito-comprado{
     display: none;
 }
+.carrito-producto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin:1rem;
+    border-radius: 1rem;
+    background-color:var(--clr-gray) ;
+    
+}
+
+.carrito-producto-imagen {
+    width: 5rem;
+    height: auto;
+    border-radius: 0.2rem;
+}
+
+.carrito-producto-titulo, .carrito-producto-cantidad, 
+.carrito-producto-precio, .carrito-producto-subtotal{
+    margin: 0 ;
+    color: var(--clr-main);
+}
+
+.carrito-producto-titulo h3, .carrito-producto-cantidad p, 
+.carrito-producto-precio p, .carrito-producto-subtotal p {
+    margin: 0;
+    color: var(--clr-main);
+}
+.carrito-producto-eliminar{
+    color: red;
+    border: none;
+}

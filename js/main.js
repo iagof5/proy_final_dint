@@ -24,6 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('televisiones').addEventListener('click', () => {
                 mostrarProductos(productos, "televisiones");
             });
+
+            actualizarCarrito(); 
+
+            document.querySelectorAll('.logo').forEach(logo => {
+                logo.addEventListener('click', () => {
+                    sessionStorage.clear(); 
+                    actualizarCarrito();
+                    window.location.href = 'index.html';
+                });
+            });
         })
         .catch(error => mostrarError(error.message));
 });
@@ -42,13 +52,40 @@ function mostrarProductos(productos, categoria) {
                 <div class="producto-detalles">
                     <h3 class="producto-titulo">${producto.titulo}</h3>
                     <p class="producto-precio">$${producto.precio}</p>
-                    <button class="producto-agregar">Agregar</button>
+                    <button class="producto-agregar" data-id="${producto.id}">Agregar</button>
                 </div>
             `;
 
             contenedorProductos.appendChild(productoDiv);
         }
     });
+
+
+    const botonesAgregar = document.querySelectorAll('.producto-agregar');
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener('click', agregarAlCarrito);
+    });
+}
+
+function agregarAlCarrito(event) {
+    const idProducto = event.target.getAttribute('data-id');
+    let carrito = JSON.parse(sessionStorage.getItem('carrito')) || {};
+
+    if (carrito[idProducto]) {
+        carrito[idProducto]++;
+    } else {
+        carrito[idProducto] = 1;
+    }
+
+    sessionStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarCarrito();
+}
+
+function actualizarCarrito() {
+    const numerito = document.getElementById('numerito');
+    let carrito = JSON.parse(sessionStorage.getItem('carrito')) || {};
+    let totalProductos = Object.values(carrito).reduce((acc, cantidad) => acc + cantidad, 0);
+    numerito.textContent = totalProductos;
 }
 
 function mostrarError(mensaje) {
